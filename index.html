@@ -407,6 +407,112 @@
             color: #ccc;
         }
 
+        /* Privacy Policy Styles */
+        .privacy {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .privacy-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 0.5rem;
+        }
+
+        .privacy-text h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .privacy-text ul {
+            margin: 1rem 0 1.5rem 1rem;
+        }
+
+        .privacy-text li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+        }
+
+        .privacy-text li strong {
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+
+        .privacy-text a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .privacy-text a:hover {
+            text-decoration: underline;
+        }
+
+        .privacy-summary {
+            background: linear-gradient(135deg, var(--light-blue) 0%, white 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .privacy-summary h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 2rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .summary-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .summary-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .summary-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-item p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -447,6 +553,7 @@
                 <li><a href="#security">Security</a></li>
                 <li><a href="#platforms">Platforms</a></li>
                 <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
             </ul>
             <a href="https://github.com/rickxuca/personal_password_manager" class="cta-button">
                 View on GitHub
@@ -667,6 +774,215 @@
         </div>
     </section>
 
+    <!-- Privacy Policy Section -->
+    <section id="privacy" class="privacy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Privacy Policy</h2>
+                <p>Your privacy is our top priority. This policy explains how we handle your data.</p>
+                <p style="font-size: 0.9rem; color: var(--gray-600); margin-top: 1rem;">
+                    <strong>Last Updated:</strong> January 2025
+                </p>
+            </div>
+            <div class="privacy-content">
+                <div class="privacy-section">
+                    <h3>🔐 Data Collection and Storage</h3>
+                    <div class="privacy-text">
+                        <h4>What We Collect:</h4>
+                        <ul>
+                            <li><strong>Account Information:</strong> Email address (used as username) and encrypted master password hash</li>
+                            <li><strong>Vault Data:</strong> Your passwords, notes, and other sensitive information (encrypted client-side)</li>
+                            <li><strong>Usage Logs:</strong> Security audit logs including login attempts, password access, and configuration changes</li>
+                            <li><strong>Technical Data:</strong> IP addresses, request timestamps, user agent strings for security monitoring</li>
+                        </ul>
+                        
+                        <h4>What We DON'T Collect:</h4>
+                        <ul>
+                            <li><strong>Your Master Password:</strong> Never stored, transmitted, or logged anywhere</li>
+                            <li><strong>Unencrypted Passwords:</strong> All vault data is encrypted before transmission and storage</li>
+                            <li><strong>Personal Analytics:</strong> No tracking, advertising, or behavioral analytics</li>
+                            <li><strong>Device Information:</strong> No device fingerprinting or hardware identifiers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>🛡️ Data Security and Encryption</h3>
+                    <div class="privacy-text">
+                        <h4>Zero-Knowledge Architecture:</h4>
+                        <ul>
+                            <li><strong>Client-Side Encryption:</strong> All sensitive data is encrypted on your device before transmission</li>
+                            <li><strong>AES-256 Encryption:</strong> Industry-standard encryption with PBKDF2-SHA256 key derivation</li>
+                            <li><strong>100,000 Iterations:</strong> High-strength password hashing compatible with Bitwarden</li>
+                            <li><strong>No Plaintext Storage:</strong> We never have access to your unencrypted passwords or notes</li>
+                        </ul>
+                        
+                        <h4>Infrastructure Security:</h4>
+                        <ul>
+                            <li><strong>AWS Security:</strong> Data stored on Amazon S3 with server-side encryption</li>
+                            <li><strong>Transit Encryption:</strong> All communications use HTTPS/TLS 1.3</li>
+                            <li><strong>Access Controls:</strong> Strict IAM roles and permissions on all AWS resources</li>
+                            <li><strong>Regular Security Updates:</strong> Automated security patches and monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>💾 Data Usage and Purpose</h3>
+                    <div class="privacy-text">
+                        <h4>How We Use Your Data:</h4>
+                        <ul>
+                            <li><strong>Service Operation:</strong> Provide password management and synchronization services</li>
+                            <li><strong>Security Monitoring:</strong> Detect suspicious activities and prevent unauthorized access</li>
+                            <li><strong>Audit Logging:</strong> Maintain security logs for your own review and compliance</li>
+                            <li><strong>Service Improvement:</strong> Analyze usage patterns to improve performance and reliability</li>
+                        </ul>
+                        
+                        <h4>Data Sharing:</h4>
+                        <ul>
+                            <li><strong>No Third-Party Sharing:</strong> We never sell, rent, or share your data with third parties</li>
+                            <li><strong>No Analytics Services:</strong> No integration with Google Analytics, Facebook, or similar services</li>
+                            <li><strong>Self-Hosted Model:</strong> Your data remains in your AWS account when self-deployed</li>
+                            <li><strong>Notification Services:</strong> Optional webhook notifications to your chosen platforms (Slack, Discord)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>📱 Mobile App Privacy (iOS)</h3>
+                    <div class="privacy-text">
+                        <h4>iOS App Data Handling:</h4>
+                        <ul>
+                            <li><strong>Local Storage:</strong> Encrypted vault cache stored securely in iOS keychain</li>
+                            <li><strong>Biometric Authentication:</strong> Face ID/Touch ID data never leaves your device</li>
+                            <li><strong>Camera Access:</strong> Only used for attachment photos, processed locally</li>
+                            <li><strong>Network Requests:</strong> Only to your configured password manager API endpoint</li>
+                            <li><strong>No Background Processing:</strong> App only communicates when actively in use</li>
+                        </ul>
+                        
+                        <h4>iOS Privacy Compliance:</h4>
+                        <ul>
+                            <li><strong>App Store Requirements:</strong> Compliant with Apple's App Store privacy guidelines</li>
+                            <li><strong>No Tracking:</strong> App does not track users across other apps or websites</li>
+                            <li><strong>Minimal Permissions:</strong> Only requests necessary permissions (camera for attachments)</li>
+                            <li><strong>Data Portability:</strong> Export functionality for all your data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>🌐 Browser Extension Privacy</h3>
+                    <div class="privacy-text">
+                        <h4>Chrome Extension Data:</h4>
+                        <ul>
+                            <li><strong>Local Storage:</strong> Encrypted vault data stored in browser's secure storage</li>
+                            <li><strong>Website Access:</strong> Only accesses websites when you explicitly use autofill</li>
+                            <li><strong>No Data Collection:</strong> Extension doesn't collect browsing habits or website data</li>
+                            <li><strong>Secure Communication:</strong> All API calls to your password manager backend only</li>
+                        </ul>
+                        
+                        <h4>Browser Permissions:</h4>
+                        <ul>
+                            <li><strong>Active Tab:</strong> Access current tab for password autofill functionality</li>
+                            <li><strong>Storage:</strong> Store encrypted vault data locally for offline access</li>
+                            <li><strong>Host Permissions:</strong> Only to your configured API endpoint</li>
+                            <li><strong>No Background Scripts:</strong> Extension only active when you interact with it</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>⚖️ Your Privacy Rights</h3>
+                    <div class="privacy-text">
+                        <h4>Data Control:</h4>
+                        <ul>
+                            <li><strong>Data Export:</strong> Export all your data in standard formats (JSON, CSV)</li>
+                            <li><strong>Data Deletion:</strong> Delete your account and all associated data at any time</li>
+                            <li><strong>Data Correction:</strong> Update or modify your information through the app</li>
+                            <li><strong>Audit Access:</strong> View all security logs and access history</li>
+                        </ul>
+                        
+                        <h4>Regulatory Compliance:</h4>
+                        <ul>
+                            <li><strong>GDPR Rights:</strong> Full compliance with European data protection requirements</li>
+                            <li><strong>CCPA Rights:</strong> California consumer privacy rights respected</li>
+                            <li><strong>Data Breach Notification:</strong> Immediate notification of any security incidents</li>
+                            <li><strong>Regular Audits:</strong> Periodic security and privacy assessments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>🔄 Data Retention and Deletion</h3>
+                    <div class="privacy-text">
+                        <h4>Retention Policy:</h4>
+                        <ul>
+                            <li><strong>Active Accounts:</strong> Data retained while account is active and in use</li>
+                            <li><strong>Inactive Accounts:</strong> Data retained for 12 months after last login</li>
+                            <li><strong>Audit Logs:</strong> Security logs retained for 24 months for compliance</li>
+                            <li><strong>Backup Retention:</strong> Encrypted backups retained for 90 days</li>
+                        </ul>
+                        
+                        <h4>Data Deletion:</h4>
+                        <ul>
+                            <li><strong>Account Deletion:</strong> All data permanently deleted within 30 days of request</li>
+                            <li><strong>Secure Deletion:</strong> Multi-pass secure deletion on all storage systems</li>
+                            <li><strong>Backup Removal:</strong> All backups containing your data securely wiped</li>
+                            <li><strong>Confirmation:</strong> Email confirmation when deletion is complete</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <h3>📞 Contact Information</h3>
+                    <div class="privacy-text">
+                        <h4>Privacy Questions:</h4>
+                        <ul>
+                            <li><strong>GitHub Issues:</strong> <a href="https://github.com/rickxuca/personal_password_manager/issues" target="_blank">Report privacy concerns</a></li>
+                            <li><strong>Security Issues:</strong> Report security vulnerabilities through responsible disclosure</li>
+                            <li><strong>Data Requests:</strong> Submit data export/deletion requests through the app</li>
+                            <li><strong>General Inquiries:</strong> Contact through GitHub repository discussions</li>
+                        </ul>
+                        
+                        <h4>Updates to Privacy Policy:</h4>
+                        <ul>
+                            <li><strong>Notification:</strong> Users notified of material changes via email and in-app notice</li>
+                            <li><strong>Version Control:</strong> All policy versions tracked in GitHub repository</li>
+                            <li><strong>Effective Date:</strong> Changes take effect 30 days after notification</li>
+                            <li><strong>Continued Use:</strong> Continued use constitutes acceptance of updated policy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="privacy-summary">
+                    <h3>📋 Privacy Summary</h3>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-icon">🔐</div>
+                            <h4>Zero Knowledge</h4>
+                            <p>We never see your passwords or personal data - everything is encrypted before it leaves your device</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon">🏠</div>
+                            <h4>Self-Hosted Option</h4>
+                            <p>Deploy on your own AWS account for complete control over your data and infrastructure</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon">📊</div>
+                            <h4>Transparent Logging</h4>
+                            <p>Complete audit trail of all activities - you can see exactly what happened and when</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon">⚖️</div>
+                            <h4>Your Rights</h4>
+                            <p>Export, delete, or modify your data at any time - you maintain full control</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -691,6 +1007,7 @@
                         <li><a href="#platforms">Platform Support</a></li>
                         <li><a href="#features">Core Features</a></li>
                         <li><a href="#architecture">AWS Integration</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
